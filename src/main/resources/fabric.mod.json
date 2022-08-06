@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "frozenstorm",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Frozen Storm",
+  "description": "This is the Frozen Storm",
   "authors": [
     "Me!"
   ],
@@ -13,17 +13,23 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0",
+  "icon": "assets/frozenstorm/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.frozenblock.frozenstorm.FrozenStorm"
+    ],
+    "client": [
+      "net.frozenblock.frozenstorm.FrozenStormClient"
+    ],
+    "mm:early_risers": [
+      "net.frozenblock.frozenstorm.EarlyRiser"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "frozenstorm.mixins.json"
   ],
 
   "depends": {
